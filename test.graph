@@ -1,0 +1,48 @@
+# Ocean background
+INEQUALITY.y_lesse(10)[x=-10,10] COLOR(0, 0, 100)
+
+# Waves (curved lines in the ocean)
+INEQUALITY.y_lesse(0.2 * sin(2 * x) + 2)[x=-10,10] COLOR(0, 0, 150)
+INEQUALITY.y_lesse(0.2 * sin(2 * x + 3.14) + 1.5)[x=-10,10] COLOR(0, 0, 150)
+
+# Island (semi-circle at the bottom)
+INEQUALITY.y_lesse(sqrt(100 - x**2) - 8)[x=-10,10] COLOR(139, 69, 19)
+INEQUALITY.y_greate(-sqrt(100 - x**2) - 8)[x=-10,10] COLOR(139, 69, 19)
+
+# Island shading (darker brown for depth)
+INEQUALITY.y_lesse(sqrt(100 - x**2) - 8.5)[x=-10,10] COLOR(101, 50, 13)
+INEQUALITY.y_greate(-sqrt(100 - x**2) - 8.5)[x=-10,10] COLOR(101, 50, 13)
+
+# Palm tree trunk (vertical rectangle)
+INEQUALITY.y_lesse(5)[x=-0.5,0.5] COLOR(101, 50, 13)
+INEQUALITY.y_greate(0)[x=-0.5,0.5] COLOR(101, 50, 13)
+
+# Palm tree trunk shading (darker side)
+INEQUALITY.y_lesse(5)[x=-0.5,-0.3] COLOR(69, 34, 9)
+INEQUALITY.y_greate(0)[x=-0.5,-0.3] COLOR(69, 34, 9)
+
+# Palm tree leaves (triangles)
+INEQUALITY.y_lesse(-abs(x) + 4)[x=-3,3] COLOR(34, 139, 34)
+INEQUALITY.y_lesse(-abs(x - 2) + 4)[x=-1,5] COLOR(34, 139, 34)
+INEQUALITY.y_lesse(-abs(x + 2) + 4)[x=-5,1] COLOR(34, 139, 34)
+
+# Palm tree leaves shading (darker green)
+INEQUALITY.y_lesse(-abs(x) + 3.8)[x=-3,3] COLOR(0, 100, 0)
+INEQUALITY.y_lesse(-abs(x - 2) + 3.8)[x=-1,5] COLOR(0, 100, 0)
+INEQUALITY.y_lesse(-abs(x + 2) + 3.8)[x=-5,1] COLOR(0, 100, 0)
+
+# Coconuts (small circles on the tree)
+INEQUALITY.y_lesse(sqrt(0.25 - (x - 0.5)**2) + 3.5)[x=0,1] COLOR(139, 69, 19)
+INEQUALITY.y_greate(-sqrt(0.25 - (x - 0.5)**2) + 3.5)[x=0,1] COLOR(139, 69, 19)
+INEQUALITY.y_lesse(sqrt(0.25 - (x + 0.5)**2) + 3.5)[x=-1,0] COLOR(139, 69, 19)
+INEQUALITY.y_greate(-sqrt(0.25 - (x + 0.5)**2) + 3.5)[x=-1,0] COLOR(139, 69, 19)
+
+# Sun (circle in the top-right corner)
+INEQUALITY.y_lesse(sqrt(16 - (x - 7)**2) + 7)[x=3,11] COLOR(255, 223, 0)
+INEQUALITY.y_greate(-sqrt(16 - (x - 7)**2) + 7)[x=3,11] COLOR(255, 223, 0)
+
+# Sun rays (lines radiating from the sun)
+INEQUALITY.y_lesse(0.5 * x + 3)[x=5,9] COLOR(255, 223, 0)
+INEQUALITY.y_lesse(-0.5 * x + 11)[x=5,9] COLOR(255, 223, 0)
+INEQUALITY.y_lesse(0.2 * x + 5)[x=5,9] COLOR(255, 223, 0)
+INEQUALITY.y_lesse(-0.2 * x + 9)[x=5,9] COLOR(255, 223, 0)
